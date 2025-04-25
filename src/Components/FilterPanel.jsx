@@ -15,14 +15,11 @@ const FilterPanel = ({ updateQueryParams, currentParams }) => {
           const response = await fetch(API_URL);
           const data = await response.json();
           console.log(data);  // Log the data to check the structure
-      
           setSpecialties(data);
         } catch (error) {
           console.error("Error fetching specialties:", error);
         }
       };
-      
-
     fetchSpecialties();
   }, []); // Empty dependency array ensures this runs only once when the component mounts
 
@@ -74,10 +71,10 @@ const FilterPanel = ({ updateQueryParams, currentParams }) => {
       </label>
 
       <h4>Specialty</h4>
-      <div className="specialties">
+      <div className="specialties" style={{ maxHeight: '300px', overflowY: 'auto' }}>
         {specialties.length > 0 ? (
           specialties.map((specialty) => (
-            <label >
+            <label key={specialty.id}>
               <input
                 type="checkbox"
                 checked={selectedSpecialties.includes(specialty.specialities.name)}
