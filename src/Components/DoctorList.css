@@ -1,0 +1,39 @@
+.doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .doctor-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #fafafa;
+  }
+  
+  .doctor-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .doctor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .clinic-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .clinic-location {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
